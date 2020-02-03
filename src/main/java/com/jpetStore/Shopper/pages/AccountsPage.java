@@ -1,5 +1,7 @@
 package com.jpetStore.Shopper.pages;
 
+import net.thucydides.core.webelements.Checkbox;
+
 public class AccountsPage extends BasePage {
 
 	private static final String USER_ID="//div[@id='Catalog']//input[@name='username']";
@@ -22,7 +24,15 @@ public class AccountsPage extends BasePage {
 	private static final String MYBANNER_RADIO="//div[@id='Catalog']//input[@name='account.bannerOption']";
 	private static final String SAVE_ACC_BTN="//div[@id='Catalog']//input[@name='newAccount']";
 	
-	public AccountsPage addNewUserInfo(String userName, String password, String repeatePassword) {
+	
+	/**
+	 * Add new user info
+	 * @param userName
+	 * @param password
+	 * @param repeatePassword
+	 * @return
+	 */
+		public AccountsPage addNewUserInfo(String userName, String password, String repeatePassword) {
 		waitForTextToAppear("User Information");
 		waitFor(USER_ID).$(USER_ID).type(userName);
 		waitFor(NEW_PASSWORD).$(NEW_PASSWORD).type(password);
@@ -30,6 +40,73 @@ public class AccountsPage extends BasePage {
 		
 		return this;
 	}
+		
+		/**
+		 * add account info method
+		 * @param firstName
+		 * @param lastName
+		 * @param email
+		 * @param phone
+		 * @param add1
+		 * @param add2
+		 * @param city
+		 * @param state
+		 * @param zip
+		 * @param country
+		 * @return
+		 */
+		public AccountsPage addAccountInformation(String firstName,
+												  String lastName,
+												  String email,
+												  String phone,
+												  String add1,
+												  String add2,
+												  String city,
+												  String state,
+												  String zip,
+												  String country) {
+			waitForTextToAppear("Account Information");
+			waitFor(FIRST_NAME).$(FIRST_NAME).type(firstName);
+			waitFor(LAST_NAME).$(LAST_NAME).type(lastName);
+			waitFor(INPUT_EMAIL).$(INPUT_EMAIL).type(email);
+			waitFor(INPUT_PHONE).$(INPUT_PHONE).type(phone);
+			waitFor(INPUT_ADD1).$(INPUT_ADD1).type(add1);
+			waitFor(INPUT_ADD2).$(INPUT_ADD2).type(add2);
+			waitFor(INPUT_CITY).$(INPUT_CITY).type(city);
+			waitFor(INPUT_STATE).$(INPUT_STATE).type(state);
+			waitFor(INPUT_ZIP).$(INPUT_ZIP).type(zip);
+			waitFor(INPUT_COUNTRY).$(INPUT_COUNTRY).type(country);
+			
+			return this;
+		}
+		
+		/**
+		 * method for adding profile info
+		 * @param language
+		 * @param category
+		 * @param myList
+		 * @param myBanner
+		 * @return
+		 */
+		
+		public AccountsPage addProfileinfo(String language, String category, boolean myList, boolean myBanner) {
+			waitForTextToAppear("Profile Information");
+			waitFor(LANGUAGE_DROP).$(LANGUAGE_DROP).selectByVisibleText(language);
+			waitFor(CATEGORY_DROP).$(CATEGORY_DROP).selectByVisibleText(category);
+			
+			Checkbox myListCheckBox = new Checkbox( $(MYLIST_RADIO) );
+			myListCheckBox.setChecked(myList);
+			
+			Checkbox myBannerCheckBox = new Checkbox( $(MYBANNER_RADIO) );
+			myBannerCheckBox.setChecked(myBanner);
+			
+			
+			return this;
+		}
+		
 	
-
+		public DashBoardPage saveInformation() {
+			waitFor(SAVE_ACC_BTN).$(SAVE_ACC_BTN).click();
+			return this.switchToPage(DashBoardPage.class);
+		}
 }

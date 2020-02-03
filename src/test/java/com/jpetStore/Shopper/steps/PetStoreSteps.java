@@ -14,7 +14,8 @@ import net.thucydides.core.steps.ScenarioSteps;
 public class PetStoreSteps extends ScenarioSteps {
 	BasePage basepage;
 	LoginPage loginpage;
-	
+	AccountsPage accountspage;
+	DashBoardPage dashBoardPage;
 	
 	/*************************************
 	 * 
@@ -80,4 +81,38 @@ public class PetStoreSteps extends ScenarioSteps {
 		return loginpage.doLogin(username, password);
 	}
 	
+	/*************************************
+	 * 
+	 * ACCOUNT PAGE STEPS
+	 * 
+	 *************************************/
+	@Step("Add new user with userName:{0}, password: {1}, repeatePassword:{2} ")
+	public AccountsPage addNewUserInfo(String userName, String password, String repeatePassword) {
+		
+		return accountspage.addNewUserInfo(userName, password, repeatePassword);
+	}
+	
+	@Step("Adding Account Information")
+	public AccountsPage addAccountInformation(String firstName,
+			  String lastName,
+			  String email,
+			  String phone,
+			  String add1,
+			  String add2,
+			  String city,
+			  String state,
+			  String zip,
+			  String country) {
+		return accountspage.addAccountInformation(firstName, lastName, email, phone, add1, add2, city, state, zip, country);
+	}
+	
+	@Step("Adding Profile Information")
+	public AccountsPage addProfileinfo(String language, String category, boolean myList, boolean myBanner) {
+		return accountspage.addProfileinfo(language, category, myList, myBanner);
+	}
+	
+	@Step("Save Account Information")
+	public DashBoardPage saveInformation() {
+		return accountspage.saveInformation();
+	}
 }
