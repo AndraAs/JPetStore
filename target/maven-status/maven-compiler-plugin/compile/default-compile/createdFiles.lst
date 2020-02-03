@@ -1,0 +1,9 @@
+com\jpetStore\Shopper\pages\AccountsPage.class
+com\jpetStore\Shopper\pages\HelpPage.class
+com\jpetStore\Shopper\App.class
+com\jpetStore\Shopper\utils\PetCategories.class
+com\jpetStore\Shopper\pages\BasePage.class
+com\jpetStore\Shopper\pages\LoginPage.class
+com\jpetStore\Shopper\pages\ProductsPage.class
+com\jpetStore\Shopper\pages\BasePage$1.class
+com\jpetStore\Shopper\pages\DashBoardPage.class
