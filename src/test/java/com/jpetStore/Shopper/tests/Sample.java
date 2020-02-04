@@ -5,6 +5,7 @@ import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 
 import com.jpetStore.Shopper.steps.PetStoreSteps;
+import com.jpetStore.Shopper.utils.PetCategories;
 
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.Managed;
@@ -20,11 +21,13 @@ public class Sample {
 	
 	@Test
 	@Title("Navigating to sign on page")
-	public void navigateToSignOnPage() {
-		
+	public void navigateToSignOnPage() throws InterruptedException {
 		shopper.navigateToSignOnPage();
-		shopper.doLogin("john.doe", "test123");
-		
+		shopper.navigateToDashBoard();
+		Thread.sleep(5000);
+//		shopper.selectProductFromSideBar(PetCategories.FISH);
+		shopper.selectProductFromCenter(PetCategories.FISH);
+		Thread.sleep(3000);
 	}
 	
 

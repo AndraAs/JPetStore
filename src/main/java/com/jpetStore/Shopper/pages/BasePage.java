@@ -64,8 +64,15 @@ public class BasePage extends PageObject {
 	
 	public DashBoardPage signOut() {
 		waitFor(SIGN_OUT_LINK).$(SIGN_OUT_LINK).click();
+		
+		waitForAbsenceOf(SIGN_OUT_LINK).shouldNotBeVisible(By.xpath(SIGN_OUT_LINK));
 		return this.switchToPage(DashBoardPage.class);
 	}
+	
+//	public DashBoardPage clickOnLogo() {
+//		waitFor(LOGO_LINK).$(LOGO_LINK).click();
+//	return this.switchToPage(DashBoardPage.class);
+//	}
 	
 	/**
 	 * nav to accounts page

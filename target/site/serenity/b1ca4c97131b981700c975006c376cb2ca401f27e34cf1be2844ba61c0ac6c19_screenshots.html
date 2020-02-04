@@ -151,7 +151,7 @@
             <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 03-02-2020 17:05</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 04-02-2020 15:58</span>
     <br style="clear:left"/>
 </div>
 
@@ -186,9 +186,9 @@
                 <table class="outcome-header">
                     <tr>
                         <td colspan="2" class="test-title-bar">
-                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-exclamation-triangle error-icon fa-2x' title='ERROR'></i></a></span>
                             <span class="test-case-title">
-                                <span class="success-color">Navigating to sign on page
+                                <span class="error-color">Navigating to sign on page
                                     <span class="related-issue-title"></span>
                                 </span>
                             </span>
@@ -205,15 +205,53 @@
 
     <div id="beforetable"></div>
     <div id="contenttilttle">
+            <div class="screenshotFailure panel panel-danger">
+
+    <div style="display:block">
+        <div class="table">
+            <div class="row">
+                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
+                    <span class="error-message error-message-title">Element not interactable exception: Element (area href='Catalog.action?viewCategory=&categoryId=FISH') could not be scrolled into view</span>
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall""
+                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="far fa-eye"></i> More details</a>
+                </div>
+             </div>
+        </div>
+    <div>
+
+    <!-- Details Section -->
+    <div class="row stacktrace-details">
+      <div class="col">
+        <div class="collapse multi-collapse" id="stacktraceModal-overall">
+            <div class="card">
+                <div class="card-header">
+                    <h4>org.openqa.selenium.ElementNotInteractableException </h4>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <pre>com.jpetStore.Shopper.pages.DashBoardPage.selectProductFromCenter(DashBoardPage.java:48)<br />com.jpetStore.Shopper.steps.PetStoreSteps.selectProductFromCenter(PetStoreSteps.java:132)<br />com.jpetStore.Shopper.tests.Sample.navigateToSignOnPage(Sample.java:29)<br />org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)<br />org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)<br />org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:541)<br />org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:763)<br />org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:463)<br />org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:209)<br /></pre>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+                <div class="panel-body">
+                    <a href="pagesource1536846680304166285.html.txt" target="_blank" class="btn btn-info">HTML Source</a>
+                </div>
+            </div>
         <div class="slider-wrapper theme-default">
             <div id="slider">
                 <img src="d907ce366221f6eebd5fbad48dbb0b88e1cfe4aec1ca602c102a715205a61098.png" title=" nav to sign on page" width="1284"/>
                 <img src="e46ea0f1356f95efeb713950583392fb4640a0ab308915233bbbdc9eb03ecbf5.png" title=" nav to sign on page" width="1284"/>
                 <img src="e46ea0f1356f95efeb713950583392fb4640a0ab308915233bbbdc9eb03ecbf5.png" title=" nav to sign on page (completed)" width="1284"/>
-                <img src="8cc13cfc5b1706df9b14fdc6f2f06576f198e938dc7fa9ed625db843ba53e93c.png" title=" logging into the app with username: john.doe &amp; password: test123" width="1284"/>
-                <img src="819a0e0817bab16b6ee2b3ce52a0d3ce785b8f05cad281555e871bb1f9f160db.png" title=" logging into the app with username: john.doe &amp; password: test123" width="1284"/>
-                <img src="464b90d8eba905e1dfbd5dc6078c66055717ae3c1723fa277da47db095922d3f.png" title=" logging into the app with username: john.doe &amp; password: test123" width="1284"/>
-                <img src="464b90d8eba905e1dfbd5dc6078c66055717ae3c1723fa277da47db095922d3f.png" title=" logging into the app with username: john.doe &amp; password: test123 (completed): <span class='success-color'>SUCCESS</span>" width="1284"/>
+                <img src="d907ce366221f6eebd5fbad48dbb0b88e1cfe4aec1ca602c102a715205a61098.png" title=" Click on company logo and nav to dashboard" width="1284"/>
+                <img src="d907ce366221f6eebd5fbad48dbb0b88e1cfe4aec1ca602c102a715205a61098.png" title=" Click on company logo and nav to dashboard (completed)" width="1284"/>
+                <img src="d907ce366221f6eebd5fbad48dbb0b88e1cfe4aec1ca602c102a715205a61098.png" title=" Select FISH pet categories from Center: <span class='error-color'>ERROR</span>" width="1284"/>
             </div>
         </div>
 

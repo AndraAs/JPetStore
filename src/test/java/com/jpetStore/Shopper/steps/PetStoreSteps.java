@@ -115,4 +115,28 @@ public class PetStoreSteps extends ScenarioSteps {
 	public DashBoardPage saveInformation() {
 		return accountspage.saveInformation();
 	}
+	/**********************************
+	 * DASHBOARD PAGE STEPS
+	 * @return
+	 *********************************/
+	@Step("Getting Welcomme Message")
+	public String getWelcommeMsg() {
+		return dashBoardPage.getWelcommeMsg();
+	}
+	@Step("Select pet categories from SideBar")
+	public ProductsPage selectProductFromSideBar(PetCategories petCategories) {
+		return dashBoardPage.selectProductFromSideBar(petCategories);
+	}
+	@Step("Select {0} pet categories from Center")
+	public ProductsPage selectProductFromCenter(PetCategories petCategories) {
+		return dashBoardPage.selectProductFromCenter(petCategories);
+	}
+	
+	
+	
+	/*************************************
+	 * 
+	 * BASE PAGE STEPS
+	 * 
+	 *************************************/
 }

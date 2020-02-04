@@ -1,2 +1,6 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
-"Sample","Navigating to sign on page","SUCCESS","2020-02-03T17:05:19.475+02:00[Europe/Athens]","0.0","6.09"
+"Accounts page test","User registration, new credentials log in","SUCCESS","2020-02-04T11:34:26.807+02:00[Europe/Athens]","0.0","16.26"
+"Login page test","Verify if user can login successfully","SUCCESS","2020-02-04T11:34:45.87+02:00[Europe/Athens]","0.0","6.11"
+"Login page test","Verify if the user can sign out succesfully","SUCCESS","2020-02-04T11:34:53.317+02:00[Europe/Athens]","0.0","11.44"
+"Login page test","Verify if invalid login message is displayed","SUCCESS","2020-02-04T11:35:05.945+02:00[Europe/Athens]","0.0","5.98"
+"Sample","Navigating to sign on page","SUCCESS","2020-02-04T11:35:13.298+02:00[Europe/Athens]","0.0","0.0"
